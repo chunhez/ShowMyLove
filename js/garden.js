@@ -111,11 +111,12 @@ Garden.prototype = {
 	}, addBloom: function (a) {
 		this.blooms.push(a)
 	}, removeBloom: function (a) {
-		var d;
+		var bloom;
 		for (var c = 0; c < this.blooms.length; c++) {
-			d = this.blooms[c];
-			if (d === a) {
-				this.blooms.splice(c, 1);
+			bloom = this.blooms[c];
+			if (bloom == a) {
+			    this.blooms.splice(c, 1);
+			    //this.blooms[c] = [];
 				return this
 			}
 		}
@@ -123,9 +124,10 @@ Garden.prototype = {
 		this.createBloom(a, b, Garden.randomInt(Garden.options.bloomRadius.min, Garden.options.bloomRadius.max), Garden.randomrgba(Garden.options.color.rmin, Garden.options.color.rmax, Garden.options.color.gmin, Garden.options.color.gmax, Garden.options.color.bmin, Garden.options.color.bmax, Garden.options.color.opacity), Garden.randomInt(Garden.options.petalCount.min, Garden.options.petalCount.max))
 	}, createBloom: function (a, f, d, e, b) {
 		new Bloom(new Vector(a, f), d, e, b, this)
-	}, clear: function () {
-		this.blooms = [];
-		this.ctx.clearRect(0, 0, this.element.width, this.element.height)
+	}, clear: function (a,b) {
+		//this.blooms = [];
+	    //this.ctx.clearRect(0, 0, this.element.width, this.element.height)
+	    this.ctx.clearRect(a - 20, b - 20, 40, 40)
 	}
 };
 Garden.options = {

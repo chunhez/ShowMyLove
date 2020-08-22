@@ -63,6 +63,56 @@ function startHeartAnimation() {
 	}, c)
 }
 
+function updateHeartAnimation() {
+    var c = 70;
+    var d = 10;
+    var b = new Array();
+    var flag = 1;
+    var a = setInterval(function () {
+        var h1 = getHeartPoint(d);
+        var h2 = getHeartPoint(39.4-d);
+        var e = true;
+        for (var f = 0; f < b.length; f++) {
+            var g = b[f];
+            var j = Math.sqrt(Math.pow(g[0] - h1[0], 2) + Math.pow(g[1] - h1[1], 2));
+            if (j < Garden.options.bloomRadius.max * 1.3) {
+                e = false;
+                break
+            }
+        }
+        if (e == true) {
+            b.push(h1);
+            b.push(h2);
+            garden.clear(h1[0], h1[1])
+            garden.clear(h2[0], h2[1])
+            garden.createRandomBloom(h1[0], h1[1])
+            garden.createRandomBloom(h2[0], h2[1])
+        }
+
+
+        if (d >= 20) {
+            //clearInterval(a);
+            showMessages()
+            b.splice(0)
+            flag = 0;
+            
+        } else if (d <= 10) {
+            showMessages()
+            b.splice(0)
+            flag = 1;
+        }
+
+
+        if (flag == 1) {
+            d += 0.2;
+        } else if (flag == 0) {
+            d = d - 0.2;
+        }
+
+    }, c)
+}
+
+
 
 function timeElapse(c) {
 	var e = Date();
