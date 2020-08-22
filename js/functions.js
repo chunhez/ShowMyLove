@@ -36,7 +36,7 @@ function getHeartPoint(c) {
 }
 
 function startHeartAnimation() {
-	var c = 50;
+	var c = 60;
 	var d = 10;
 	var b = new Array();
 	var a = setInterval(function () {
