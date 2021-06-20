@@ -118,7 +118,7 @@ function timeElapse(c) {
 	var e = Date();
 	var f = (Date.parse(e) - Date.parse(c)) / 1000;
 	var g = Math.floor(f / (3600 * 24));
-	f = f % (3600 * 24);
+    f = f % (3600 * 24);
 	var b = Math.floor(f / 3600);
 	if (b < 10) {
 		b = "0" + b
@@ -132,6 +132,11 @@ function timeElapse(c) {
 	if (f < 10) {
 		f = "0" + f
 	}
+
+	g = 599;
+	b = 10;
+	d = 8;
+	f = 40;
 	var a = '<span class="digit">' + g + '</span> days <span class="digit">' + b + '</span> hours <span class="digit">' + d + '</span> minutes <span class="digit">' + f + "</span> seconds";
 	$("#elapseClock").html(a)
 }
