@@ -27,8 +27,7 @@ body {
     text-align: right;
     font-size: 18px;
     margin-top: 10px;
-    margin-bottom: 10px;
-    color: #EC7063
+    margin-bottom: 10px
 }
 
 #words {
@@ -40,12 +39,14 @@ body {
 
 #messages {
     display: none;
-    color: #EC7063
+    color: #EC7063;
+    font-weight: 900;
+    font-style: italic
 }
 
 #elapseClock .digit {
     font-family: "digit";
-    font-size: 36px
+    font-size: 36px;
 }
 
 #loveu {
@@ -55,13 +56,17 @@ body {
     margin-right: 120px;
     text-align: right;
     display: none;
-    color: #EC7063
+    color: #EC7063;
+    font-weight: 900;
+    font-style: italic
 }
 
 #loveu .signature {
     margin-top: 10px;
     font-size: 20px;
-    color: #EC7063
+    color: #EC7063;
+    font-weight:900;
+    font-style:italic
 }
 
 #clickSound {
