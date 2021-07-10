@@ -28,7 +28,7 @@ body {
     font-size: 18px;
     margin-top: 10px;
     margin-bottom: 10px;
-    color: #AED6F1
+    color: #EC7063
 }
 
 #words {
@@ -40,7 +40,7 @@ body {
 
 #messages {
     display: none;
-    color: #AED6F1
+    color: #EC7063
 }
 
 #elapseClock .digit {
@@ -55,13 +55,13 @@ body {
     margin-right: 120px;
     text-align: right;
     display: none;
-    color: #AED6F1
+    color: #EC7063
 }
 
 #loveu .signature {
     margin-top: 10px;
     font-size: 20px;
-    color: #AED6F1
+    color: #EC7063
 }
 
 #clickSound {
