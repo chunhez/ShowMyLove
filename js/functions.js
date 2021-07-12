@@ -91,7 +91,7 @@ function updateHeartAnimation() {
 
 
         if (d >= 20) {
-            //clearInterval(a);
+            clearInterval(a);
             showMessages()
             b.splice(0)
             flag = 0;
